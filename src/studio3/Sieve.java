@@ -10,17 +10,15 @@ public class Sieve {
 		System.out.println("What is the input number?");
 		int n = in.nextInt();
 		int[] anArray = new int[n-1];
-		for (int i = 0; i < anArray.length; i++)
+		for (int i = 0; i < n; i++)
 		{
-			if (anArray[i] == 0)
+			anArray[i] = i + 2;
+			System.out.println(anArray[i]);
+			for (int j = i + (i + 2); j < n; j = i + 2)
 			{
-				anArray[i] = i + 2;
-				System.out.println(anArray[i]);
-				for (int j = i + (i + 2); j < anArray.length; j = i + 2)
-				{
-					anArray[j] = 1;
-					System.out.println((j + 2));
-				}
+				anArray[j] = 1;
+				System.out.println((j + 2));
+				
 			}
 		}
 		
